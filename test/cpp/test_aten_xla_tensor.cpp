@@ -5476,7 +5476,7 @@ TEST_F(AtenXlaTensorTest, TestIndexAdd) {
     }
   }
   ExpectCounterNotChanged("aten::.*", cpp_test::GetIgnoredCounters());
-  ExpectCounterChanged("xla::index_add_", cpp_test::GetIgnoredCounters());
+  ExpectCounterChanged("xla::index_add", cpp_test::GetIgnoredCounters());
 }
 
 TEST_F(AtenXlaTensorTest, TestIndexAddInPlace) {
@@ -5517,7 +5517,7 @@ TEST_F(AtenXlaTensorTest, TestIndexAddInPlace) {
     }
   }
   ExpectCounterNotChanged("aten::.*", cpp_test::GetIgnoredCounters());
-  ExpectCounterChanged("xla::index_add_", cpp_test::GetIgnoredCounters());
+  ExpectCounterChanged("xla::index_add", cpp_test::GetIgnoredCounters());
 }
 
 TEST_F(AtenXlaTensorTest, TestIndexAddRank0) {
@@ -5552,7 +5552,7 @@ TEST_F(AtenXlaTensorTest, TestIndexAddRank0) {
       });
 
       ExpectCounterNotChanged("aten::.*", cpp_test::GetIgnoredCounters());
-      ExpectCounterChanged("xla::index_add_", cpp_test::GetIgnoredCounters());
+      ExpectCounterChanged("xla::index_add", cpp_test::GetIgnoredCounters());
     }
   }
 }
